@@ -1,79 +1,98 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
   }
   
-  body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-   /*  justify-content: flex-start;
-    background: linear-gradient(0deg, rgba(19,41,61,1) 0%, rgba(237,245,249,1) 63%);
-     cursor: pointer;  */
+  textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
   }
-  .top{background-color: lightblue;
-    height: 200px;
-    color: rgb(25, 228, 25);
-    font-size: 30px;} /* I use*/
-
-    .leftSpan{float:left;
-      font-size:22px}  
   
-  .headline {
-    font-size: 30px;
-    height: 60px;
-    line-height: 30px;
-    margin-top: 30px;
-    margin-left: 10%
-  } 
-
-  .list1 {
-    font-size: 24px;
-    position: relative; 
-   /* margin-left: 25%; */
-    left: 9%;
-    /*    line-height: 35px; */
-    margin: 10px;
-    font-weight: bold;
-    /* margin-top: 20px; 
-    color: blue; */
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  } /* I use Class lead is undefined */
+  
+  .description {
+    white-space: pre-wrap;
+  }
+  
+  .time-block {
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;
+  }
+  
+  .hour {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+      font-size: 18px;
+      display: inline-block;
+      text-align: right;
+      width: 10%;
+      height: 60px;
+      
+      position: relative; 
+      left: 10%;
+      flex-wrap: wrap-reverse;
+      margin: 0.1%;
+     /* border-radius: 5px; */
+    } /* I use */
+  
+  .past {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: black;
+    display: inline-block;
+  font-size: 18px;
+ 
+  width: 60%;
+  height: 60px;
+  /* background-color: lightblue;
+  color: white; */
+  position: relative; 
+  left: 10%;
+  flex-wrap: wrap-reverse;
+  margin: 0.1%;
   } /* I use */
   
-  .button-style {
-    font-size: 18px;
-    /* I know changing cursor is not required I just tried */ 
-    cursor: pointer;
-    background-color: purple;
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #06aed5;
     color: white;
-    position: relative; 
-    left: 10%;
-    flex-wrap: wrap-reverse;
-    margin: 0.2%;
-    border-radius: 5px;
-  } /* I use*/
-
-  .button-style:hover {
-    font-size: 18px;
-    cursor: pointer;
-    background-color: lightblue;
-    color: white;
-    left: 10%;
-    margin: 0.2%;
-    border-radius: 5px;
-  } 
-  
-  .answer {
-    line-height: normal;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-    font-style: italic;
-    margin-left: 10%;
-    font-size: 18px;
-    color: grey;
   }
-  .p-style {
+  
+  .saveBtn i:hover {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+ /* .p-style {
     font-size: 18px;
     display: inline-block;
     text-align: right;
@@ -85,10 +104,9 @@
     left: 10%;
     flex-wrap: wrap-reverse;
     margin: 0.1%;
-   /* border-radius: 5px; */
   } /* I use */
 
-  .p2-style {
+  /*.p2-style {
       display: inline-block;
     font-size: 18px;
     width: 40%;
@@ -99,17 +117,17 @@
     left: 10%;
     flex-wrap: wrap-reverse;
     margin: 0.1%;
-    /* border-radius: 5px; */
-  } /* I use */
+    border-radius: 5px;
+  } I use */
 
-  .p3-style {
+  .lock-style {
     display: inline-block;
     text-align: center;
   font-size: 18px;
   /* margin: 0;
   position: relative; */
-  -ms-transform: translateY(5%);
-  transform: translateY(5%);
+  /* -ms-transform: translateY(5%);
+  transform: translateY(5%); */
   width: 10%;
   height: 60px;
   background-color: lightblue;
@@ -119,7 +137,6 @@
   flex-wrap: wrap-reverse;
   margin: 0.1%;
   border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-right-radius: 5px; 
 } /* I use */
  
-  
