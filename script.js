@@ -54,28 +54,31 @@ $('#currentDay').text(date); //place var date to class container
     }; // end setting for loop
 
     // to enter new text and save
-    var zeroButton = document.querySelector('#hour0');
-    var firstButton = document.querySelector("#hour1");
-    var secondButton = document.querySelector("#hour2");
-    var thirdButton = document.querySelector("#hour3");
-    var forthButton = document.querySelector("#hour4");
+    var zeroButton = document.querySelector('#button0');
+    var zeroEntry = document.querySelector('#hour0');
+    var firstButton = document.querySelector("#button1");
+    var firstEntry = document.querySelector('#hour1');
+    var secondButton = document.querySelector("#button2");
+    var secondEntry = document.querySelector('#hour2');
+    // var thirdButton = document.querySelector("#button3");
+   //  var forthButton = document.querySelector("#button4");
 
     zeroButton.addEventListener('click', updateEntry);
     firstButton.addEventListener("click", updateEntry);
     secondButton.addEventListener("click", updateEntry);
-    thirdButton.addEventListener("click", updateEntry);
-    forthButton.addEventListener("click", updateEntry);
+    // thirdButton.addEventListener("click", updateEntry);
+    // forthButton.addEventListener("click", updateEntry);
 
-    function updateEntry () {localStorage.setItem('hour0', zeroButton.textContent);
-    localStorage.setItem('hour1', firstButton.textContent);
-    localStorage.setItem('hour2', secondButton.textContent);
+    function updateEntry () {localStorage.setItem('hour0', zeroEntry.textContent);
+    localStorage.setItem('hour1', firstEntry.textContent);
+    localStorage.setItem('hour2', secondEntry.textContent);
     var count0 = localStorage.getItem('hour0');
     var count1 = localStorage.getItem('hour1');
     var count2 = localStorage.getItem('hour2');
     console.log (count0 + ' ' + count1 + ' ' + count2)
   } 
   
-  updateEntry ()// {zeroButton.textContent = localStorage.getItem} // i need to get value first then set value in local storage
+  // updateEntry ()// {zeroButton.textContent = localStorage.getItem} // i need to get value first then set value in local storage
 
     // to retrieve item start with button0
    //  document.querySelector('#button0').textContent = localStorage.getItem()
