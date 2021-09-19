@@ -3,15 +3,15 @@ var AMPM;
 //  var time = moment();
 var date = moment().format("dddd, MMMM Do");
 var hour = moment().format("HH");
+
+
 $('#currentDay').text(date); //place var date to class container
 
+// this FOR LOOP dynamically creates 3 elements in 9 rows. elements include hour displayed as 9AM. text area with record, save button
 
     for (i = 0; i < 9; i++) {
 
-      // var buttonId = "button".concat(i);
-      // var divTag = document.createElement("div");
         var divTag = document.createElement('div');
-      //  divTag.textContent = 'div ' + i;
       divTag.setAttribute("class", "div-style")
       divTag.setAttribute("id", "divId")
       document.getElementById('bottom').appendChild(divTag);
@@ -23,62 +23,90 @@ $('#currentDay').text(date); //place var date to class container
             AMPM = 'PM'}
         else {hourNumber = i - 3;
         AMPM = 'PM'}
-      //      function createDelay() {console.log(i)};
       spanTag0.textContent =  hourNumber + AMPM;
       spanTag0.setAttribute("class", "hour")
       spanTag0.setAttribute("id", "pId")
-      //document.getElementById('divId').appendChild(spanTag0);
       divTag.appendChild(spanTag0);
       var hourRecord = document.createElement("textarea");
-      hourRecord.textContent = i;
       hourRecord.setAttribute("id", "hour"+i);
       console.log(hourRecord.getAttribute('id'));
-      var temp = hourRecord.textContent;
-      localStorage.setItem("hour"+i, temp);
-      if (hour - 6 < (i + 9)) {hourRecord.setAttribute("class", "future")}
-      //  console.log(hour - 6 + ' ' + (i + 9));}
-      else if (hour - 6 === (i + 9)) {hourRecord.setAttribute("class", "present")}
-      // console.log(hour - 6 + ' ' + (i + 9));}
+      console.log(hour);
+      if (hour - 1 < (i + 9)) {hourRecord.setAttribute("class", "future")}
+      else if (hour - 1 === (i + 9)) {hourRecord.setAttribute("class", "present")}
       else {hourRecord.setAttribute("class", "past")}
-     // pTag1.setAttribute("id", "pId")
-     // document.getElementById('pId').appendChild(pTag1);
-      // spanTag1.setAttribute("class", "future")
       divTag.appendChild(hourRecord);
       var saveB = document.createElement("Button");
       saveB.textContent = '🔒';
       saveB.setAttribute("class", "saveBtn");
       saveB.setAttribute("id", "button"+i);
-      //document.getElementById('divId').appendChild(spanTag0);
       divTag.appendChild(saveB);      
       
-    }; // end setting for loop
+    }; // end setting FOR LOOP
 
-    // to enter new text and save
+    //next 18 lines are created to make sure that when I reload the page, content in local storage still displays there
+  var scheduleContent0 = localStorage.getItem('hour0');
+  var scheduleContent1 = localStorage.getItem('hour1');
+  var scheduleContent2 = localStorage.getItem('hour2');
+  var scheduleContent3 = localStorage.getItem('hour3');
+  var scheduleContent4 = localStorage.getItem('hour4');
+  var scheduleContent5 = localStorage.getItem('hour5');
+  var scheduleContent6 = localStorage.getItem('hour6');
+  var scheduleContent7 = localStorage.getItem('hour7');
+  var scheduleContent8 = localStorage.getItem('hour8');
+  hour0.textContent = scheduleContent0;
+  hour1.textContent = scheduleContent1;
+  hour2.textContent = scheduleContent2;
+  hour3.textContent = scheduleContent3;
+  hour4.textContent = scheduleContent4;
+  hour5.textContent = scheduleContent5;
+  hour6.textContent = scheduleContent6;
+  hour7.textContent = scheduleContent7;
+  hour8.textContent = scheduleContent8;
+
+  //let me called this part of script RECORD DATA. when user enters data and clicks save button, content is recorded to local storage
+
     var zeroButton = document.querySelector('#button0');
-    var zeroEntry = document.querySelector('#hour0');
     var firstButton = document.querySelector("#button1");
-    var firstEntry = document.querySelector('#hour1');
     var secondButton = document.querySelector("#button2");
-    var secondEntry = document.querySelector('#hour2');
-    // var thirdButton = document.querySelector("#button3");
-   //  var forthButton = document.querySelector("#button4");
+    var thirdButton = document.querySelector("#button3");
+   var forthButton = document.querySelector("#button4");
+   var fifthButton = document.querySelector("#button5");
+   var sixthButton = document.querySelector("#button6");
+   var seventhButton = document.querySelector("#button7");
+   var eigthButton = document.querySelector("#button8");
 
     zeroButton.addEventListener('click', updateEntry);
     firstButton.addEventListener("click", updateEntry);
     secondButton.addEventListener("click", updateEntry);
-    // thirdButton.addEventListener("click", updateEntry);
-    // forthButton.addEventListener("click", updateEntry);
+    thirdButton.addEventListener("click", updateEntry);
+    forthButton.addEventListener("click", updateEntry);
+    fifthButton.addEventListener('click', updateEntry);
+    sixthButton.addEventListener('click', updateEntry);
+    seventhButton.addEventListener('click', updateEntry);
+    eigthButton.addEventListener('click', updateEntry);
 
-    function updateEntry () {localStorage.setItem('hour0', zeroEntry.textContent);
-    localStorage.setItem('hour1', firstEntry.textContent);
-    localStorage.setItem('hour2', secondEntry.textContent);
-    var count0 = localStorage.getItem('hour0');
-    var count1 = localStorage.getItem('hour1');
-    var count2 = localStorage.getItem('hour2');
-    console.log (count0 + ' ' + count1 + ' ' + count2)
+    function updateEntry () {    var entry0 = document.getElementById('hour0').value;
+    var entry1 = document.getElementById('hour1').value;
+    var entry2 = document.getElementById('hour2').value;
+    var entry3 = document.getElementById('hour3').value;
+    var entry4 = document.getElementById('hour4').value;
+    var entry5 = document.getElementById('hour5').value;
+    var entry6 = document.getElementById('hour6').value;
+    var entry7 = document.getElementById('hour7').value;
+    var entry8 = document.getElementById('hour8').value;
+     localStorage.setItem('hour0', entry0)
+    localStorage.setItem('hour1', entry1);
+    localStorage.setItem('hour2', entry2)
+   localStorage.setItem('hour3', entry3);
+   localStorage.setItem('hour4', entry4);
+   localStorage.setItem('hour5', entry5);
+   localStorage.setItem('hour6', entry6);
+   localStorage.setItem('hour7', entry7);
+   localStorage.setItem('hour8', entry8);
+    console.log (entry0 + ' ' + entry1 + ' ' + entry2 );
   } 
   
-  // updateEntry ()// {zeroButton.textContent = localStorage.getItem} // i need to get value first then set value in local storage
+  // end RECORD DATA part
 
     // to retrieve item start with button0
    //  document.querySelector('#button0').textContent = localStorage.getItem()
