@@ -12,21 +12,21 @@ $('#currentDay').text(date); //place var date to class container
     for (i = 0; i < 9; i++) {
 
         var divTag = document.createElement('div');
-      divTag.setAttribute("class", "div-style")
-      divTag.setAttribute("id", "divId")
+      divTag.setAttribute("class", "div-style");
+      divTag.setAttribute("id", "divId");
       document.getElementById('bottom').appendChild(divTag);
       bottom.appendChild(divTag);
-      var spanTag0 = document.createElement("span");
+      var hourTag0 = document.createElement("span");
       if (i < 3) {hourNumber = i + 9;
         AMPM = 'AM'}
         else if (i === 3) {hourNumber = i + 9;
             AMPM = 'PM'}
         else {hourNumber = i - 3;
         AMPM = 'PM'}
-      spanTag0.textContent =  hourNumber + AMPM;
-      spanTag0.setAttribute("class", "hour")
-      spanTag0.setAttribute("id", "pId")
-      divTag.appendChild(spanTag0);
+      hourTag0.textContent =  hourNumber + AMPM;
+      hourTag0.setAttribute("class", "hour")
+      hourTag0.setAttribute("id", "pId")
+      divTag.appendChild(hourTag0);
       var hourRecord = document.createElement("textarea");
       hourRecord.setAttribute("id", "hour"+i);
       console.log(hourRecord.getAttribute('id'));
@@ -103,14 +103,8 @@ $('#currentDay').text(date); //place var date to class container
    localStorage.setItem('hour6', entry6);
    localStorage.setItem('hour7', entry7);
    localStorage.setItem('hour8', entry8);
-    console.log (entry0 + ' ' + entry1 + ' ' + entry2 );
   } 
   
   // end RECORD DATA part
-
-    // to retrieve item start with button0
-   //  document.querySelector('#button0').textContent = localStorage.getItem()
-
- //   setTimeout(createDelay, 5000)
 
 

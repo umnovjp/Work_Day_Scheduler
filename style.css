@@ -24,7 +24,7 @@ body {
   
   .description {
     white-space: pre-wrap;
-  }
+  } /* I do not use it*/
   
   .time-block {
     text-align: center;
@@ -41,16 +41,16 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
-      font-size: 18px;
-      display: inline-block;
-      text-align: right;
-      width: 10%;
-      height: 60px;
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+    width: 10%;
+    height: 60px;
       
-      position: relative; 
-      left: 10%;
-      flex-wrap: wrap-reverse;
-      margin: 0.1%;
+    position: relative; 
+    left: 10%;
+    flex-wrap: wrap-reverse;
+    margin: 0.1%;
      /* border-radius: 5px; */
     } /* I use */
   
@@ -58,44 +58,37 @@ body {
     background-color: #d3d3d3;
     color: black;
     display: inline-block;
-  font-size: 18px;
-  width: 60%;
-  height: 60px;
-  /* background-color: lightblue;
-  color: white; */
-  position: relative; 
-  left: 10%;
-  flex-wrap: wrap-reverse;
-  margin: 0.1%;}
+    font-size: 18px;
+    width: 60%;
+    height: 60px;
+    position: relative; 
+    left: 10%;
+    flex-wrap: wrap-reverse;
+    margin: 0.1%;}
   
   .present {
     background-color: #ff6961;
     color: white;
     display: inline-block;
-  font-size: 18px;
-  width: 60%;
-  height: 60px;
-  /* background-color: lightblue;
-  color: white; */
-  position: relative; 
-  left: 10%;
-  flex-wrap: wrap-reverse;
-  margin: 0.1%;}
+    font-size: 18px;
+    width: 60%;
+    height: 60px;
+    position: relative; 
+    left: 10%;
+    flex-wrap: wrap-reverse;
+    margin: 0.1%;}
   
   .future {
     background-color: #77dd77;
     color: black;
     display: inline-block;
-  font-size: 18px;
- 
-  width: 60%;
-  height: 60px;
-  /* background-color: lightblue;
-  color: white; */
-  position: relative; 
-  left: 10%;
-  flex-wrap: wrap-reverse;
-  margin: 0.1%;
+    font-size: 18px;
+    width: 60%;
+    height: 60px;
+    position: relative; 
+    left: 10%;
+    flex-wrap: wrap-reverse;
+    margin: 0.1%;
   } /* I use */
   
   .saveBtn {
@@ -106,22 +99,14 @@ body {
     color: white;
     display: inline-block;
     text-align: center;
-  font-size: 18px;
-  vertical-align: -20px;
-  /* margin: 0;
-  position: relative; */
-  /* -ms-transform: translateY(5%);
-  transform: translateY(5%); */
-  width: 10%;
-  height: 60px;
-  /* background-color: lightblue;
-  color: white; */
-  position: relative; 
-  left: 10%;
-  flex-wrap: wrap-reverse;
-  margin: 0.1%;
-  /* border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;  */
+    font-size: 18px;
+    vertical-align: -20px;
+    width: 10%;
+    height: 60px;
+    position: relative; 
+    left: 10%;
+    flex-wrap: wrap-reverse;
+    margin: 0.1%;
   }
   
   .saveBtn i:hover {
@@ -129,51 +114,5 @@ body {
     transition: all 0.3s ease-in-out;
   }
 
- /* .p-style {
-    font-size: 18px;
-    display: inline-block;
-    text-align: right;
-    width: 10%;
-    height: 60px;
-    background-color: lightgray;
-    color: black;
-    position: relative; 
-    left: 10%;
-    flex-wrap: wrap-reverse;
-    margin: 0.1%;
-  } /* I use */
 
-  /*.p2-style {
-      display: inline-block;
-    font-size: 18px;
-    width: 40%;
-    height: 60px;
-    background-color:lightgreen;
-    color: black;
-    position: relative; 
-    left: 10%;
-    flex-wrap: wrap-reverse;
-    margin: 0.1%;
-    border-radius: 5px;
-  } I use */
-
- /* .lock-style {
-    display: inline-block;
-    text-align: center;
-  font-size: 18px;
-  /* margin: 0;
-  position: relative; */
-  /* -ms-transform: translateY(5%);
-  transform: translateY(5%); */
- /* width: 10%;
-  height: 60px;
-  background-color: lightblue;
-  color: white;
-  position: relative; 
-  left: 10%;
-  flex-wrap: wrap-reverse;
-  margin: 0.1%;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px; 
-} /* I use */
  
