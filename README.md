@@ -6,5 +6,6 @@ When I scroll down, I am presented with time blocks for standard business hours 
 When I click a time block, I can enter an event. When I click save button for that event, text for that event is saved in local storage. 
 
 When I refresh the page, the saved events persist. 
+![image](https://user-images.githubusercontent.com/88174852/133943069-cffd2237-2c5d-45af-a3d8-ffa2e8270bdd.png)
 
 Link to deployed application is https://umnovjp.github.io/Work_Day_Scheduler/. 
